@@ -13,7 +13,10 @@ int songuyento(long long  n) {
 
 int main () {
     long long n;
-    scanf("%lld", &n);
+    do {
+        scanf("%lld", &n);
+    }while(n < 2);
+    
     if (songuyento(n)){
         printf("YES");
     }else{
