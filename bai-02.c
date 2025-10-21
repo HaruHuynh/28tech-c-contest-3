@@ -9,7 +9,7 @@ int sphenic (long long so)  {
             int bac = 0;
             while (so % i == 0){
                 so /= i;
-                bac++;
+                bac++; // Nếu i hợp lệ và chia hết
                 if(bac > 1) return 0;
             }
             count++;
