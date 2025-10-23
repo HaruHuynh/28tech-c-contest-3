@@ -1,3 +1,5 @@
+// Một số được coi là thuần nguyên tố nếu nó là số nguyên tố, tất cả các chữ số là nguyên tố và tổng chữ số của nó cũng là một số nguyên tố. Bài toán đặt ra là đếm xem trong một đoạn giữa hai số nguyên a, b cho trước có bao nhiêu số thuần nguyên tố.
+
 #include <stdio.h>
 #include <math.h>
 
@@ -14,9 +16,9 @@ int csnt(int n){
     int sum = 0;
     while(n){
         int r = n % 10; // Phân tách từng số trong n
-        sum += r;
         if(r != 2 && r != 3 && r != 5 && r != 7)
             return 0;// Nếu bất kì số nào trong n không nằm trong 2 3 5 7 -> loại
+        sum += r;
         n /= 10; // Chuyển sang số tiếp theo để so sánh
     }
     return nt(sum); // Gọi hàm ktra tổng có phải là SNT hay không
