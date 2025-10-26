@@ -20,7 +20,7 @@ int main() {
     while(t--){
         int n;
         scanf("%d", &n);
-        for(int i = 2; i < n / 2; i++){
+        for(int i = 1; i < n / 2; i++){
             if(nt(i) && nt(n - i)){
                 printf("%d %d\n", i, n - i);
             }
