@@ -21,8 +21,12 @@ int main (){
     int x,y,z,n;
     scanf("%d%d%d%d", &x, &y, &z, &n);
     ll bc = BCNN(x, BCNN(y, z));
+    // •	pow(10, n-1) = số nhỏ nhất có n chữ số.
+    // Ví dụ:
+	// •	n=3 → tmp = 100.
+	// •	n=4 → tmp = 1000.
     ll tmp = (ll)pow(10, n - 1);
-    // Tìm bội số nhỏ nhất của a mà ≥ b
+    // Tìm bội số nhỏ nhất của a mà ≥ b (Tìm bội số nhỏ nhất của bc mà ≥ tmp)
     ll kq = (tmp + bc - 1) / bc * bc; // [(a + b - 1) / b] * b;
     if(kq < pow(10, n)) // Kiểm tra có còn đủ n chữ số không
         printf("%lld\n", kq);
